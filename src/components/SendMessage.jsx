@@ -27,7 +27,7 @@ function SendMessage() {
                         placeholder="メッセージを入力してください"
                         type="text"
                         onChange={(e) => setMessage(e.target.value)}/>
-                    <SendIcon></SendIcon>
+                    <SendIcon />
                 </div>
             </form>
         </div>
