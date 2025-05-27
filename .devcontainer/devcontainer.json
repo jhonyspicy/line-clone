@@ -1,7 +1,7 @@
 {
   "name": "line-clone-devcontainer",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "../Dockerfile"
   },
   "forwardPorts": [
     3000

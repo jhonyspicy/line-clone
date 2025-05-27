@@ -1,5 +1,5 @@
 # Use the official Node.js image (latest LTS version)
-FROM node:current
+FROM node:24-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Install app dependencies
 RUN npm install
+RUN apt-get update && apt-get install -y git
 
 # Bundle app source
 COPY . .
