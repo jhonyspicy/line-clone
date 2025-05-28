@@ -4,9 +4,9 @@ import firebase from 'firebase/compat/app';
 import { auth } from '../firebase'; // Adjust the import path as necessary}
 
 function SignIn() {
-    const signInWidthGoogle = () => {
+    const signInWidthGoogle = async () => {
         const provider = new firebase.auth.GoogleAuthProvider();
-        auth.signInWithPopup(provider)
+        await auth.signInWithPopup(provider)
     }
 
 

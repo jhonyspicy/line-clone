@@ -6,12 +6,12 @@ import SendIcon from '@mui/icons-material/Send';
 
 function SendMessage() {
     const [message, setMessage] = useState('')
-    const sendMessage = (e) => {
+    const sendMessage = async (e) => {
         e.preventDefault()
 
         const {uid, photoURL} = auth.currentUser
 
-        db.collection('messages').add({
+        await db.collection('messages').add({
             text: message,
             photoURL,
             uid,
